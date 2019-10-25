@@ -3,7 +3,7 @@
   <main>
     <app-sidebar></app-sidebar>
     <div class="pages container-fluid pt-4 pb-4 pl-4 pr-4">
-      <div style="text-align:center">
+      <!-- <div style="text-align:center">
         <h1>
           Welcome to {{ title }}!
         </h1>
@@ -21,12 +21,10 @@
         <li>
           <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
         </li>
-      </ul>
-      <p>
-        layout works!
-      </p>
-      <router-outlet></router-outlet>
-      <hr>      
+      </ul> -->
+      <router-outlet ></router-outlet>
+      <hr>
+      <app-footer></app-footer>      
     </div>
     <div class="overlay" (click)="toggleSidebar()"></div>
   </main>

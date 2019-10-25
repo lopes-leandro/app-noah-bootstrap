@@ -1,0 +1,36 @@
+<!-- <agm-map [latitude]="lat" [zoom]="zoom" [longitude]="lng">
+  <agm-marker-cluster imagePath="/assets/img/m">    
+    <agm-marker *ngFor="let sensor of markers" [latitude]="sensor.lat"
+      [longitude]="sensor.lng"> </agm-marker>
+  </agm-marker-cluster>
+</agm-map> -->
+
+
+<!-- <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map> -->
+
+
+
+
+
+<agm-map
+  [latitude]="lat"
+  [longitude]="lng"
+  [zoom]="zoom"
+  [disableDefaultUI]="false"
+  [zoomControl]="false">
+
+  <agm-marker
+    *ngFor="let m of markers; let i= index"
+
+    [latitude]="m.lat"
+    [longitude]="m.lng"
+    [label]="m.label">
+
+    <agm-info-window>
+      <strong>Sensor {{m.label}}</strong>
+    </agm-info-window>
+
+  </agm-marker>
+</agm-map>

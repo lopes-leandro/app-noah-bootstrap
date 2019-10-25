@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class LayoutService {
 
-  isSidebarPinned = false;
+  isSidebarPinned = true;
   isSidebarToggeled = false;
 
   constructor() { }
