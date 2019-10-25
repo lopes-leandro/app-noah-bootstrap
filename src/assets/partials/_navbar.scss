@@ -1,0 +1,141 @@
+.wrapper {
+
+  nav.navbar {
+    height: $navbar-height;
+    padding: 0;
+    border-bottom: 1px solid;
+
+    .navbar-header {
+
+      .navbar-brand {
+        font-size: 1rem;
+        font-weight: normal;
+        letter-spacing: 2px;
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    .nav-toggler-right {
+      position: relative;
+
+      button {
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        border: none;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 1px solid #fff;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+
+  .navbar-header {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .left-nav {
+    display: none;
+
+
+    input.navbar-search {
+      max-width: 500px;
+      border-radius: 0;
+      border: none;
+      height: 40px;
+      font-size: .9rem;
+    }
+
+  }
+
+  .right-nav {
+    border-top: 1px solid;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    height: calc(100vh - #{$navbar-height} + 1px) !important;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      li {
+        flex: 1 1 0;
+        max-width: 110px;
+        padding: 1rem;
+
+        .nav-link {
+          position: relative;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+
+          .link-text {
+            margin-top: 10px;
+            font-size: .9rem;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    .navbar-header {
+      width: $sidebar-width;
+      margin-left: 0 !important;
+
+      .navbar-brand span {
+        display: inline-block;
+      }
+    }
+
+    .sidebar-toggler {
+      display: none;
+    }
+
+    .left-nav {
+      display: flex;
+    }
+
+    .right-nav {
+      height: 100% !important;
+      border-top: none;
+      background: none !important;
+
+      ul {
+
+        margin-left: auto;
+        flex-wrap: nowrap;
+
+        li {
+          padding: 0;
+
+          .nav-link {
+
+            .link-text {
+              display: none;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light flex-fill fixed-top">
+  <!--header-->
+  <div class="navbar-header ml-3 pl-2 pr-2 text-center">
+    <a class="navbar-brand m-0 w-100" href="#">
+      <i class="fab fa-linux mr-1"></i>
+      <span class="ml-1">NOAH</span>
+    </a>
+  </div>
+  <!--sidebar toggler-->
+  <div class="sidebar-toggler ml-auto mr-3">
+    <a class="btn nav-link" (click)="toggleSidebar()"><i class="fa fa-bars"></i></a>
+  </div>
+  <!--right menu toggler-->
+  <div class="nav-toggler-right mr-4 d-md-none">
+    <button type="button" (click)="isCollapsed = !isCollapsed" aria-controls="navbarSupportedContent"
+      [attr.aria-expanded]="!isCollapsed">
+      <span class="navbar-toggler-icon"></span>
+      <!-- <img src="" alt=""> -->
+    </button>
+    <!-- <span class="user-profile nav-alert bg-danger"></span> -->
+  </div>
+  <!-- left box -->
+  <ul class="navbar-nav flex-fill mt-1 align-items-center left-nav">
+    <li class="nav-item navicon">
+      <a class="btn nav-link" (click)="toggleSidebarPin()"><i class="fa fa-bars"></i></a>
+    </li>
+    <li class="nav-item flex-fill">
+      <input class="form-control navbar-search" type="text" placeholder="Search . . .">
+    </li>
+  </ul>
+
+  <!-- right menu -->
+  <div class="collapse navbar-collapse right-nav" id="navbarSupportedContent" [collapse]="isCollapsed">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="btn nav-link" href="#">
+          <i class="far fa-envelope"></i>
+          <span class="link-text">Home</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="btn nav-link" href="#">
+          <i class="far fa-envelope"></i>
+          <span class="link-text">Link</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="btn nav-link disabled" href="#">
+          <i class="far fa-envelope"></i>
+          <span class="link-text">Disabled</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
